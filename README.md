@@ -1,23 +1,26 @@
-# GemFarmer-Express Boilerplate
+# Cabin Manager--Modern Bulletin Board
+Sharing a cabin with many families can lead to confusion. 
+Who maintenances this? Who maintenances that? Who filled the boat up last? Who? WHo? Who?
 
-## Basic Boilerplate for Node.js/Express
+### Features
+*Works well on mobile devices (currently only reliable internet access is on phone)
+*Secure user login
+*Guest login with access to some, but not all, info
+*Manage photos
+*Mange financial balances between different groups (budgeting tool for different parts of cabin)
+*Contact info for mainenance people
+*Notes section
+* TO DO Section
 
-### Dependencies
-1. Cake
-2. CoffeeScript
-3. Express
-4. Jade
-5. Mongoose/MongoDB
-6. Jade
-7. Stylus
+###Technologies
+Node/Express
+CoffeeScript
+Mongoose
+Angular
+Bootstrap
+Canvas Api
+Moment
 
 ### CDN includes
 1. Bootstap
-2. J@uery
-
-#### What to do
-1. Clone Repo: `git clone https://github.com/gemfarmer/Gemfarmer-Express-Boilerplate.git`
-2. In terminal at directory: `npm install`
-3. Start server: `cake dev`
-4. Add new terminal tab: `sudo mongod`
-5. Add another new tab: `mongo`
+2. J@uery 
