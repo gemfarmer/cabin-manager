@@ -1,5 +1,10 @@
 console.log("fire index.js")
 
-exports.index = (req, res) ->
-  res.render('index', { title: 'Cabin Manager' })
-  return
+module.exports = {
+	index: (req, res) ->
+		res.render('index', { title: 'Cabin Manager' })
+		return
+	charts: (req, res) ->
+		res.render('charts.jade', { title: 'Cabin Manager' })
+		return
+}

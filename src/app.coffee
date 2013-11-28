@@ -37,6 +37,7 @@ TestModel = mongoose.model('TestModel', {
 	})
 
 app.get('/', routes.index);
+app.get('/charts', routes.charts)
 app.post '/submitdata', (req,res) ->
 	submitedInfo = req.body
 	console.log("submitedInfo", submitedInfo)

@@ -16,11 +16,11 @@ block content
 			.collapse.navbar-collapse.navbar-ex1-collapse
 				ul.nav.navbar-nav.side-nav
 					li.active
-						a(href='index.html')
+						a(href='/')
 							i.fa.fa-dashboard
 							| Dashboard
 					li
-						a(href='charts.html')
+						a(href='/charts')
 							i.fa.fa-bar-chart-o
 							| Charts
 					li
@@ -383,9 +383,9 @@ block content
 
 
 		
-	// Page Specific Plugins 
-	script(src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')
-	script(src='http://cdn.oesmith.co.uk/morris-0.4.3.min.js')
-	//- script(src='js/morris/chart-data-morris.js')
-	//- script(src='js/tablesorter/jquery.tablesorter.js')
-	//- script(src='js/tablesorter/tables.js')
+	block pageScripts
+		script(src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')
+		script(src='http://cdn.oesmith.co.uk/morris-0.4.3.min.js')
+		script(src='js/morris/chart-data-morris.js')
+		script(src='js/tablesorter/jquery.tablesorter.js')
+		script(src='js/tablesorter/tables.js')
