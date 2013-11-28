@@ -1,11 +1,21 @@
 doctype 5
-html
+html(lang='en')
 	head
-		title #{title} 
-		link(rel='stylesheet', href='stylesheets/lib/style.css')
-		link(rel='stylesheet', href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css")
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name='description', content='')
+		meta(name='author', content='')
+		title Dashboard - SB Admin
+		// Bootstrap core CSS 
+		link(href='stylesheets/bootstrap.css', rel='stylesheet')
+		// Add custom CSS here 
+		link(href='stylesheets/sb-admin.css', rel='stylesheet')
+		link(rel='stylesheet', href='font-awesome/css/font-awesome.min.css')
+		// Page Specific CSS 
+		link(rel='stylesheet', href='http://cdn.oesmith.co.uk/morris-0.4.3.min.css')
 	body
 		block content
-		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
-		script(src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js")
+		script(src='javascripts/jquery-1.10.2.js')
+		script(src='javascripts/bootstrap.js')
 		script(src="javascripts/lib/main.js")
+		
