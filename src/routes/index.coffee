@@ -7,4 +7,7 @@ module.exports = {
 	charts: (req, res) ->
 		res.render('charts.jade', { title: 'Cabin Manager' })
 		return
+	forms: (req, res) ->
+		res.render('forms.jade', { title: 'Cabin Manager' })
+		return
 }
