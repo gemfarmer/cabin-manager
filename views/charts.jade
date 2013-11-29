@@ -1,183 +1,184 @@
-extends index
+extends layout
 
-#page-wrapper
-	.row
-		.col-lg-12
-				h1
-					| Charts
-					small Display Your Data
-				ol.breadcrumb
-					li
-						a(href='index.html')
-							i.fa.fa-dashboard
-							| Dashboard
-					li.active
-						i.fa.fa-bar-chart-o
+block content
+	#page-wrapper
+		.row
+			.col-lg-12
+					h1
 						| Charts
-				.alert.alert-info.alert-dismissable
-					button.close(type='button', data-dismiss='alert', aria-hidden='true') ×
-					| There are two options for charts:
-					a.alert-link(href='http://www.flotcharts.org/', target='_blank') Flot charts
-					| and
-					a.alert-link(href='http://www.oesmith.co.uk/morris.js/', target='_blank') morris.js
-					| . Choose which one best suits your needs, and make sure to master the documentation to get the most out of these charts!
+						small Display Your Data
+					ol.breadcrumb
+						li
+							a(href='index.html')
+								i.fa.fa-dashboard
+								| Dashboard
+						li.active
+							i.fa.fa-bar-chart-o
+							| Charts
+					.alert.alert-info.alert-dismissable
+						button.close(type='button', data-dismiss='alert', aria-hidden='true') ×
+						| There are two options for charts:
+						a.alert-link(href='http://www.flotcharts.org/', target='_blank') Flot charts
+						| and
+						a.alert-link(href='http://www.oesmith.co.uk/morris.js/', target='_blank') morris.js
+						| . Choose which one best suits your needs, and make sure to master the documentation to get the most out of these charts!
 
-	.row
-		.col-lg-12
-			h2 Flot Charts
-			.panel.panel-primary
-				.panel-heading
-					h3.panel-title
-						i.fa.fa-bar-chart-o
-						| Line Graph Example with Tooltips
-				.panel-body
-					.flot-chart
-						#flot-chart-line.flot-chart-content
+		.row
+			.col-lg-12
+				h2 Flot Charts
+				.panel.panel-primary
+					.panel-heading
+						h3.panel-title
+							i.fa.fa-bar-chart-o
+							| Line Graph Example with Tooltips
+					.panel-body
+						.flot-chart
+							#flot-chart-line.flot-chart-content
 
-	.row
-		.col-lg-4
-			.panel.panel-primary
-				.panel-heading
-					h3.panel-title
-						i.fa.fa-long-arrow-right
-						| Pie Chart Example with Tooltips
-				.panel-body
-					.flot-chart
-						#flot-chart-pie.flot-chart-content
-					.text-right
-						a(href='#')
-							| View Details
-							i.fa.fa-arrow-circle-right
-		.col-lg-8
-			.panel.panel-primary
-				.panel-heading
-					h3.panel-title
-						i.fa.fa-long-arrow-right
-						| Multiple Axes Line Graph Example with Tooltips and Raw Data
-				.panel-body
-					.flot-chart
-						#flot-chart-multiple-axes.flot-chart-content
-					.text-right
-						a(href='#')
-							| View Details
-							i.fa.fa-arrow-circle-right
+		.row
+			.col-lg-4
+				.panel.panel-primary
+					.panel-heading
+						h3.panel-title
+							i.fa.fa-long-arrow-right
+							| Pie Chart Example with Tooltips
+					.panel-body
+						.flot-chart
+							#flot-chart-pie.flot-chart-content
+						.text-right
+							a(href='#')
+								| View Details
+								i.fa.fa-arrow-circle-right
+			.col-lg-8
+				.panel.panel-primary
+					.panel-heading
+						h3.panel-title
+							i.fa.fa-long-arrow-right
+							| Multiple Axes Line Graph Example with Tooltips and Raw Data
+					.panel-body
+						.flot-chart
+							#flot-chart-multiple-axes.flot-chart-content
+						.text-right
+							a(href='#')
+								| View Details
+								i.fa.fa-arrow-circle-right
 
-	.row
-		.col-lg-6
-			.panel.panel-primary
-				.panel-heading
-					h3.panel-title
-						i.fa.fa-long-arrow-right
-						| Moving Line Chart
-				.panel-body
-					.flot-chart
-						#flot-chart-moving-line.flot-chart-content
-					.text-right
-						a(href='#')
-							| View Details
-							i.fa.fa-arrow-circle-right
-		.col-lg-6
-			.panel.panel-primary
-				.panel-heading
-					h3.panel-title
-						i.fa.fa-long-arrow-right
-						| Bar Graph with Tooltips
-				.panel-body
-					.flot-chart
-						#flot-chart-bar.flot-chart-content
-					.text-right
-						a(href='#')
-							| View Details
-							i.fa.fa-arrow-circle-right
+		.row
+			.col-lg-6
+				.panel.panel-primary
+					.panel-heading
+						h3.panel-title
+							i.fa.fa-long-arrow-right
+							| Moving Line Chart
+					.panel-body
+						.flot-chart
+							#flot-chart-moving-line.flot-chart-content
+						.text-right
+							a(href='#')
+								| View Details
+								i.fa.fa-arrow-circle-right
+			.col-lg-6
+				.panel.panel-primary
+					.panel-heading
+						h3.panel-title
+							i.fa.fa-long-arrow-right
+							| Bar Graph with Tooltips
+					.panel-body
+						.flot-chart
+							#flot-chart-bar.flot-chart-content
+						.text-right
+							a(href='#')
+								| View Details
+								i.fa.fa-arrow-circle-right
 
-	.row
-		.col-lg-12
-			h3 Additional Flot Chart Information
-			p
-				| Full documentation for Flot can be found at
-				a(href='http://www.flotcharts.org/', target='_blank') http://www.flotcharts.org/
-				| . Flot has a lot of different options available, and they have a bunch of plugins as well that allow you to do neat things. Here we are using the tooltip plugin, the resize plugin, and the pie chart plugin, but there are many more to choose from. The documentation is a bit more advanced and requires a good deal of JavaScript knowledge in order to make the charts work for you.
-			p
-				strong NOTE:
-				| The charts are responsive, and the Flot charts are redrawn when the window resizes. The only one that needs a page refresh on a window resize is the pie chart. If you find a way to fix this, please let me know.
+		.row
+			.col-lg-12
+				h3 Additional Flot Chart Information
+				p
+					| Full documentation for Flot can be found at
+					a(href='http://www.flotcharts.org/', target='_blank') http://www.flotcharts.org/
+					| . Flot has a lot of different options available, and they have a bunch of plugins as well that allow you to do neat things. Here we are using the tooltip plugin, the resize plugin, and the pie chart plugin, but there are many more to choose from. The documentation is a bit more advanced and requires a good deal of JavaScript knowledge in order to make the charts work for you.
+				p
+					strong NOTE:
+					| The charts are responsive, and the Flot charts are redrawn when the window resizes. The only one that needs a page refresh on a window resize is the pie chart. If you find a way to fix this, please let me know.
 
-	.row
-		.col-lg-12
-			h2 morris.js Charts
-			.panel.panel-primary
-				.panel-heading
-					h3.panel-title
-						i.fa.fa-bar-chart-o
-						| Area Line Graph Example with Tooltips
-				.panel-body
-					#morris-chart-area
+		.row
+			.col-lg-12
+				h2 morris.js Charts
+				.panel.panel-primary
+					.panel-heading
+						h3.panel-title
+							i.fa.fa-bar-chart-o
+							| Area Line Graph Example with Tooltips
+					.panel-body
+						#morris-chart-area
 
-	.row
-		.col-lg-4
-			.panel.panel-primary
-				.panel-heading
-					h3.panel-title
-						i.fa.fa-long-arrow-right
-						| Donut Chart Example
-				.panel-body
-					#morris-chart-donut
-					.text-right
-						a(href='#')
-							| View Details
-							i.fa.fa-arrow-circle-right
-		.col-lg-4
-			.panel.panel-primary
-				.panel-heading
-					h3.panel-title
-						i.fa.fa-long-arrow-right
-						| Line Graph Example with Tooltips
-				.panel-body
-					#morris-chart-line
-					.text-right
-						a(href='#')
-							| View Details
-							i.fa.fa-arrow-circle-right
-		.col-lg-4
-			.panel.panel-primary
-				.panel-heading
-					h3.panel-title
-						i.fa.fa-long-arrow-right
-						| Bar Graph Example
-				.panel-body
-					#morris-chart-bar
-					.text-right
-						a(href='#')
-							| View Details
-							i.fa.fa-arrow-circle-right
+		.row
+			.col-lg-4
+				.panel.panel-primary
+					.panel-heading
+						h3.panel-title
+							i.fa.fa-long-arrow-right
+							| Donut Chart Example
+					.panel-body
+						#morris-chart-donut
+						.text-right
+							a(href='#')
+								| View Details
+								i.fa.fa-arrow-circle-right
+			.col-lg-4
+				.panel.panel-primary
+					.panel-heading
+						h3.panel-title
+							i.fa.fa-long-arrow-right
+							| Line Graph Example with Tooltips
+					.panel-body
+						#morris-chart-line
+						.text-right
+							a(href='#')
+								| View Details
+								i.fa.fa-arrow-circle-right
+			.col-lg-4
+				.panel.panel-primary
+					.panel-heading
+						h3.panel-title
+							i.fa.fa-long-arrow-right
+							| Bar Graph Example
+					.panel-body
+						#morris-chart-bar
+						.text-right
+							a(href='#')
+								| View Details
+								i.fa.fa-arrow-circle-right
 
-	.row
-		.col-lg-12
-			h3 Additional morris.js Information
-			p
-				| Full documentation for morris.js charts can be found at
-				a(href='http://www.oesmith.co.uk/morris.js/', target='_blank') http://www.oesmith.co.uk/morris.js/
-				| . The chart options for morris.js are
-				a(href='http://www.oesmith.co.uk/morris.js/lines.html', target='_blank') line & area charts
-				| ,
-				a(href='http://www.oesmith.co.uk/morris.js/bars.html') bar charts
-				| , and
-				a(href='http://www.oesmith.co.uk/morris.js/donuts.html', target='_blank') donut charts
-				| . The documentation is pretty straight forward, and you will want to look at it in order to get the most out of the charts.
-			p
-				strong NOTE:
-				| The charts are responsive, but they are drawn when the window loads. If you change the window size, for instance resizing your brownser window, you will need to refresh the page to redraw the chart responsively. According to morris.js, automatically redrawing charts on window resizing is being worked into their next big update.
-block pageScripts
+		.row
+			.col-lg-12
+				h3 Additional morris.js Information
+				p
+					| Full documentation for morris.js charts can be found at
+					a(href='http://www.oesmith.co.uk/morris.js/', target='_blank') http://www.oesmith.co.uk/morris.js/
+					| . The chart options for morris.js are
+					a(href='http://www.oesmith.co.uk/morris.js/lines.html', target='_blank') line & area charts
+					| ,
+					a(href='http://www.oesmith.co.uk/morris.js/bars.html') bar charts
+					| , and
+					a(href='http://www.oesmith.co.uk/morris.js/donuts.html', target='_blank') donut charts
+					| . The documentation is pretty straight forward, and you will want to look at it in order to get the most out of the charts.
+				p
+					strong NOTE:
+					| The charts are responsive, but they are drawn when the window loads. If you change the window size, for instance resizing your brownser window, you will need to refresh the page to redraw the chart responsively. According to morris.js, automatically redrawing charts on window resizing is being worked into their next big update.
+	block pageScripts
 
-	script(src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')
-	script(src='http://cdn.oesmith.co.uk/morris-0.4.3.min.js')
-	script(src='javascripts/morris/chart-data-morris.js')
-	script(src='javascripts/tablesorter/jquery.tablesorter.js')
-	script(src='javascripts/tablesorter/tables.js')
-	//if lte IE 8
-	script(src='javascripts/excanvas.min.js')
-	script(src='javascripts/flot/jquery.flot.js')
-	script(src='javascripts/flot/jquery.flot.tooltip.min.js')
-	script(src='javascripts/flot/jquery.flot.resize.js')
-	script(src='javascripts/flot/jquery.flot.pie.js')
-	script(src='javascripts/flot/chart-data-flot.js')
+		script(src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js')
+		script(src='http://cdn.oesmith.co.uk/morris-0.4.3.min.js')
+		script(src='javascripts/morris/chart-data-morris.js')
+		script(src='javascripts/tablesorter/jquery.tablesorter.js')
+		script(src='javascripts/tablesorter/tables.js')
+		//if lte IE 8
+		script(src='javascripts/excanvas.min.js')
+		script(src='javascripts/flot/jquery.flot.js')
+		script(src='javascripts/flot/jquery.flot.tooltip.min.js')
+		script(src='javascripts/flot/jquery.flot.resize.js')
+		script(src='javascripts/flot/jquery.flot.pie.js')
+		script(src='javascripts/flot/chart-data-flot.js')
 
