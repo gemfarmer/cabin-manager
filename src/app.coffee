@@ -39,9 +39,15 @@ TestModel = mongoose.model('TestModel', {
 app.get('/', routes.index);
 app.get('/charts', routes.charts)
 app.get('/forms', routes.forms)
-app.get('/calendar', routes.calendar)
-app.get('/contacts', routes.contacts)
 app.get('/tables', routes.tables)
+app.get('/contacts', routes.contacts)
+app.get('/calendar', routes.calendar)
+app.get('/log', routes.log)
+app.get('/howtos', routes.howtos)
+app.get('/directions', routes.directions)
+app.get('/memories', routes.memories)
+app.get('/finance', routes.finance)
+
 app.post '/submitdata', (req,res) ->
 	submitedInfo = req.body
 	console.log("submitedInfo", submitedInfo)

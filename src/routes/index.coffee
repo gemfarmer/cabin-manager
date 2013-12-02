@@ -10,13 +10,28 @@ module.exports = {
 	forms: (req, res) ->
 		res.render('forms.jade', { title: 'Cabin Manager', subtitle: 'Forms' })
 		return
-	calendar: (req, res) ->
-		res.render('calendar.jade', { title: 'Cabin Manager', subtitle: 'Calendar' })
-		return
+	tables: (req, res) ->
+		res.render('tables.jade', { title: 'Cabin Manager', subtitle: 'Tables' })
+		return 
 	contacts: (req, res) ->
 		res.render('contacts.jade', { title: 'Cabin Manager', subtitle: 'Contacts' })
 		return
-	tables: (req, res) ->
-		res.render('tables.jade', { title: 'Cabin Manager', subtitle: 'Tables' })
+	calendar: (req, res) ->
+		res.render('calendar.jade', { title: 'Cabin Manager', subtitle: 'Calendar' })
+		return
+	log: (req, res) ->
+		res.render('log.jade', { title: 'Cabin Manager', subtitle: 'Log' })
+		return
+	howtos: (req, res) ->
+		res.render('howtos.jade', { title: 'Cabin Manager', subtitle: 'How Tos' })
+		return
+	directions: (req, res) ->
+		res.render('directions.jade', { title: 'Cabin Manager', subtitle: 'Directions' })
+		return
+	memories: (req, res) ->
+		res.render('memories.jade', { title: 'Cabin Manager', subtitle: 'Memories' })
+		return
+	finance: (req, res) ->
+		res.render('finance.jade', { title: 'Cabin Manager', subtitle: 'Finance' })
 		return
 }

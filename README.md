@@ -26,7 +26,8 @@ Moment
 2. J@uery 
 
 
-### Template
+### Angular Resources:
+* http://briantford.com/blog/angular-express.html
 ####Start Bootstrap: 
 * http://startbootstrap.com/templates/sb-admin/tables.html
 
