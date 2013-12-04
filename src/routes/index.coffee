@@ -40,11 +40,12 @@ console.log("fire index.js")
  # GET home page.
 ###
 
-exports.index = (req, res) ->
-  res.render('index', { title: 'Cabin Manager' });
+module.exports = {
+	layout : (req, res) ->
+		res.render('layout', { title: 'Cabin Manager' });
+	partials =  (req, res) ->
+		name = req.params.name;
+		res.render('partials/' + name);
 
-
-exports.partials =  (req, res) ->
-  name = req.params.name;
-  res.render('partials/' + name);
+}
 

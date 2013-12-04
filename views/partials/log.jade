@@ -1,0 +1,22 @@
+#page-wrapper
+	.row
+		.col-lg-12
+			h1
+				| #{subtitle}
+				small A Blank Slate
+			ol.breadcrumb
+				li
+					a(href='index.html')
+						i.icon-dashboard
+						| Dashboard
+				li.active
+					i.icon-file-alt
+					| #{subtitle}
+	.content(data-ng-app="")
+		label Name:
+		input(type="text", ng-model="yourName", placeholder="Enter a name here")
+		hr
+		h1 Hello my name is {{yourName}}. My name is {{yourName}}!
+
+
+block pageScripts

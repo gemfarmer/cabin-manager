@@ -1,5 +1,5 @@
 doctype 5
-html(lang='en')
+html(lang='en', data-ng-app="CabinManager")
 	head
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
@@ -190,7 +190,7 @@ html(lang='en')
 									a(href='#')
 										i.fa.fa-power-off
 										| Log Out
-			block content
+			div(data-ng-view="")
 			block pageScripts
 		script(src='javascripts/jquery-1.10.2.js')
 		script(src='//code.jquery.com/jquery-1.10.2.min.js')

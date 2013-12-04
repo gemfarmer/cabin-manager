@@ -37,7 +37,7 @@ if ('development' == app.get('env'))
 # 	name: String
 # 	})
 
-app.get('/', routes.index);
+app.get('/', routes.layout)
 # app.get('/charts', routes.charts)
 # app.get('/forms', routes.forms)
 # app.get('/tables', routes.tables)
