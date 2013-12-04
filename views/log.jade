@@ -15,10 +15,11 @@ block content
 					li.active
 						i.icon-file-alt
 						| #{subtitle}
-		.content.ng-app
+		.content(data-ng-app="")
 			label Name:
 			input(type="text", ng-model="yourName", placeholder="Enter a name here")
 			hr
-			h1 Hello {{yourName}}!
+			h1 Hello my name is {{yourName}}. My name is {{yourName}}!
+
 
 block pageScripts

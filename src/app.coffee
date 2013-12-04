@@ -6,13 +6,14 @@ console.log("fire app.js")
 express = require('express');
 routes = require('./routes');
 http = require('http');
+api = require('./routes/api')
 path = require('path');
 mongoose = require('mongoose')
 
 app = express();
 
 # all environments
-app.set('port', process.env.PORT or 3000);
+app.set('port', process.env.PORT or 3002);
 app.set('views', __dirname + '/../views');
 app.set('view engine', 'jade');
 app.use(express.favicon());
@@ -28,35 +29,38 @@ if ('development' == app.get('env'))
 
 
 # Connect Mongo DB
-mongoURI = process.env.MONGOHQ_URL or 'mongodb://localhost/veganizzmapp'
-mongoose.connect(mongoURI)
+# mongoURI = process.env.MONGOHQ_URL or 'mongodb://localhost/cabinmanager'
+# mongoose.connect(mongoURI)
 
 # Set up Schema
-TestModel = mongoose.model('TestModel', {
-	name: String
-	})
+# TestModel = mongoose.model('TestModel', {
+# 	name: String
+# 	})
 
 app.get('/', routes.index);
-app.get('/charts', routes.charts)
-app.get('/forms', routes.forms)
-app.get('/tables', routes.tables)
-app.get('/contacts', routes.contacts)
-app.get('/calendar', routes.calendar)
-app.get('/log', routes.log)
-app.get('/howtos', routes.howtos)
-app.get('/directions', routes.directions)
-app.get('/memories', routes.memories)
-app.get('/finance', routes.finance)
+# app.get('/charts', routes.charts)
+# app.get('/forms', routes.forms)
+# app.get('/tables', routes.tables)
+# app.get('/contacts', routes.contacts)
+# app.get('/calendar', routes.calendar)
+# app.get('/log', routes.log)
+# app.get('/howtos', routes.howtos)
+# app.get('/directions', routes.directions)
+# app.get('/memories', routes.memories)
+# app.get('/finance', routes.finance)
 
-app.post '/submitdata', (req,res) ->
-	submitedInfo = req.body
-	console.log("submitedInfo", submitedInfo)
-	testModel = new TestModel(submitedInfo)
-	testModel.save (err,data) ->
-		console.log("sent to database:",data)
-		return
-	return
+# app.post '/submitdata', (req,res) ->
+# 	submitedInfo = req.body
+# 	console.log("submitedInfo", submitedInfo)
+# 	testModel = new TestModel(submitedInfo)
+# 	testModel.save (err,data) ->
+# 		console.log("sent to database:",data)
+# 		return
+# 	return
+app.get('/partials/:name', routes.partials);
 
+# JSON API
+app.get('/api/names', api.names);
 
 http.createServer(app).listen(app.get('port'), () ->
 	console.log('Express server listening on port ' + app.get('port'));
