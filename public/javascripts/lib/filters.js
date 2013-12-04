@@ -2,7 +2,7 @@
 
 /* Filters */
 
-angular.module('testAngular.filters', []).
+angular.module('cabinManager.filters', []).
   filter('interpolate', function (version) {
     return function (text) {
       return String(text).replace(/\%VERSION\%/mg, version);

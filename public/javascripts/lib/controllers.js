@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-angular.module('testAngular.controllers', [])
+angular.module('cabinManager.controllers', [])
 	.controller('SimpleController', function ($scope, $http) {
 		$http({
 			method: 'GET',

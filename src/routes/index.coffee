@@ -43,7 +43,7 @@ console.log("fire index.js")
 module.exports = {
 	layout : (req, res) ->
 		res.render('layout', { title: 'Cabin Manager' });
-	partials =  (req, res) ->
+	partials : (req, res) ->
 		name = req.params.name;
 		res.render('partials/' + name);
 

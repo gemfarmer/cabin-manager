@@ -1,5 +1,5 @@
 doctype 5
-html(lang='en', data-ng-app="CabinManager")
+html(lang='en', data-ng-app="cabinManager")
 	head
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
@@ -36,43 +36,43 @@ html(lang='en', data-ng-app="CabinManager")
 								i.fa.fa-dashboard
 								| Dashboard
 						li
-							a(href='/charts')
+							a(href='charts')
 								i.fa.fa-bar-chart-o
 								| Charts
 						li
-							a(href='/forms')
+							a(href='forms')
 								i.fa.fa-edit
 								| Forms
 						li
-							a(href='/tables')
+							a(href='tables')
 								i.fa.fa-table
 								| Tables
 						li
-							a(href='/contacts')
+							a(href='contacts')
 								i.fa.fa-user
 								| Contacts
 						li
-							a(href='/calendar')
+							a(href='calendar')
 								i.fa.fa-calendar
 								| Calendar
 						li
-							a(href='/log')
+							a(href='log')
 								i.fa.fa-check-square-o
 								| Cabin Log
 						li
-							a(href='/howtos')
+							a(href='howtos')
 								i.fa.fa-archive
 								| How-Tos
 						li
-							a(href='/directions')
+							a(href='directions')
 								i.fa.fa-map-marker
 								| Directions
 						li
-							a(href='/Memories')
+							a(href='memories')
 								i.fa.fa-glass
 								| Memories
 						li
-							a(href='/Finance')
+							a(href='finance')
 								i.fa.fa-money
 								| Finance
 						li.dropdown
@@ -192,13 +192,18 @@ html(lang='en', data-ng-app="CabinManager")
 										| Log Out
 			div(data-ng-view="")
 			block pageScripts
-		script(src='javascripts/jquery-1.10.2.js')
+		//- script(src='javascripts/jquery-1.10.2.js')
 		script(src='//code.jquery.com/jquery-1.10.2.min.js')
 		//- script(src='http://code.jquery.com/jquery-1.8.3.min.js')
 		//- script(src='http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js')
 		script(src='javascripts/bootstrap.js')
 		script(src="javascripts/lib/main.js")
 		script(src="javascripts/angular/angular.js")
+		script(src="javascripts/lib/app.js")
+		script(src="javascripts/lib/services.js")
+		script(src="javascripts/lib/controllers.js")
+		script(src="javascripts/lib/filters.js")
+		script(src="javascripts/lib/directives.js")
 		//- script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.3/")
 
 		

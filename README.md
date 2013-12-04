@@ -13,13 +13,13 @@ Who maintenances this? Who maintenances that? Who filled the boat up last? Who? 
 * TO DO Section
 
 ###Technologies
-Node/Express
-CoffeeScript
-Mongoose
-Angular
-Bootstrap
-Canvas Api
-Moment
+* Node/Express
+* CoffeeScript
+* Mongoose
+* Angular
+* Bootstrap
+* Canvas Api
+* Moment
 
 ### CDN includes
 1. Bootstap

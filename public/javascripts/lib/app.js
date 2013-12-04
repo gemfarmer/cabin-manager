@@ -1,42 +1,67 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-angular.module("testAngular", ['testAngular.controllers',
-	'testAngular.controllers',
-	'testAngular.filters',
-	'testAngular.services',
-	'testAngular.directives'
+angular.module("cabinManager", ['cabinManager.controllers',
+	'cabinManager.controllers',
+	'cabinManager.filters',
+	'cabinManager.services',
+	'cabinManager.directives'
 ])
 .config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
 	$routeProvider.
-		when('/view1',
+		when('/',
 			{
-				templateUrl: 'partials/view1',
+				templateUrl: 'partials/index',
 				controller: 'NoController'
 			}).
-		when('/view2',
+		when('/charts',
 			{
-				templateUrl: 'partials/view2',
+				templateUrl: 'partials/charts',
 				controller: 'NoController'
 			}).
-		when('/view3',
+		when('/forms',
 			{
-				templateUrl: 'partials/view3',
-				controller: 'SimpleController'
+				templateUrl: 'partials/forms',
+				controller: 'NoController'
 			}).
-		when('/view4',
+		when('/tables',
 			{
-				templateUrl: 'partials/view4',
-				controller: 'SimpleController'
+				templateUrl: 'partials/tables',
+				controller: 'NoController'
 			}).
-		when('/view5',
+		when('/contacts',
 			{
-				templateUrl: 'partials/view5',
-				controller: 'SimpleController'
+				templateUrl: 'partials/contacts',
+				controller: 'NoController'
+			}).
+		when('/calendar',
+			{
+				templateUrl: 'partials/calendar',
+				controller: 'NoController'
+			}).
+		when('/log',
+			{
+				templateUrl: 'partials/log',
+				controller: 'NoController'
+			}).
+		when('/howtos',
+			{
+				templateUrl: 'partials/howtos',
+				controller: 'NoController'
+			}).
+		when('/directions',
+			{
+				templateUrl: 'partials/directions',
+				controller: 'NoController'
+			}).
+		when('/memories',
+			{
+				templateUrl: 'partials/memories',
+				controller: 'NoController'
 			}).
 		otherwise(
 			{
-				redirectTo: '/view1'
+				redirectTo: '/'
 			})
 	$locationProvider.html5Mode(true);
 }]);
