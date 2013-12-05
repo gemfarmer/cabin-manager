@@ -2,7 +2,7 @@
 	.row
 		.col-lg-12
 			h1
-				| #{subtitle}
+				| Cabin Log
 				small A Blank Slate
 			ol.breadcrumb
 				li
@@ -10,13 +10,30 @@
 						i.icon-dashboard
 						| Dashboard
 				li.active
-					i.icon-file-alt
-					| #{subtitle}
-	.content(data-ng-app="")
-		label Name:
-		input(type="text", ng-model="yourName", placeholder="Enter a name here")
-		hr
-		h1 Hello my name is {{yourName}}. My name is {{yourName}}!
+					i.fa.fa-check-square-o
+					| Cabin Log
+	
+
+	
+	
+	.row
+		.container.col-xs-12
+			div(ng-controller="TodoCtrl")
+				span {{remaining()}} of {{todos.length}} tasks remaining
+				| [
+				a(href='', ng-click='archive()') Clean-up
+				| ]
+				ul.unstyled#todo-list
+					li#todo-item(ng-repeat='todo in todos')
+						input(type='checkbox', ng-model='todo.done')
+						span(class="done-{{todo.done}}") {{todo.text}}
+				form(ng-submit='addTodo()')
+					input(type='text', ng-model='todoText', size='30', placeholder='add new todo here')
+					input.btn.btn-primary(type='submit', value='Add')
+					
 
 
 block pageScripts
+	script(src='javascripts/lib/todo.js')
+
+	

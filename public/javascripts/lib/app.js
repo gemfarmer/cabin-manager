@@ -42,7 +42,7 @@ angular.module("cabinManager", ['cabinManager.controllers',
 		when('/log',
 			{
 				templateUrl: 'partials/log',
-				controller: 'NoController'
+				controller: 'TodoCtrl'
 			}).
 		when('/howtos',
 			{

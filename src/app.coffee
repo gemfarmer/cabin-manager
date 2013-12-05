@@ -60,7 +60,9 @@ app.get('/', routes.layout)
 app.get('/partials/:name', routes.partials);
 
 # JSON API
-app.get('/api/names', api.names);
+app.get('/api/todos', api.todos);
+app.get('/api/todo/:id', api.todo);
+app.post('/api/todo', api.addTodo);
 
 http.createServer(app).listen(app.get('port'), () ->
 	console.log('Express server listening on port ' + app.get('port'));
